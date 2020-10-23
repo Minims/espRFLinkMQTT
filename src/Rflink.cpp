@@ -27,7 +27,7 @@ void readRfLinkPacket(char* line) {
 		
         // get name : 3rd field (begins at char 6)
         while(line[i] != ';' && i < BUFFER_SIZE && j < MAX_DATA_LEN) {
-                if      (line[i]==' ') MQTT_NAME[j] = '_';
+                if      (line[i]==' ') MQTT_NAME[j] = ' ';
                 else if (line[i]=='=')  { nameHasEq = true; break; }
                 else MQTT_NAME[j] = line[i];
 				if (line[i]=='-')  { nameHasDash = true; }			// to handle Internal_Pullup_on_RF-in_disabled (missing ";") to improve

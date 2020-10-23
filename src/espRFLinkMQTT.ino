@@ -238,7 +238,7 @@ void buildMqttTopic() {
 	strcpy(MQTT_TOPIC,MQTT_PUBLISH_TOPIC);
 	strcat(MQTT_TOPIC,"/");
 	strcat(MQTT_TOPIC,MQTT_NAME);
-	strcat(MQTT_TOPIC,"-");
+	strcat(MQTT_TOPIC,"-ID=");
 	strcat(MQTT_TOPIC,MQTT_ID);;
 }
 
